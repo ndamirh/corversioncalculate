@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="homepage.css">
+  <title>TEMPERATURE CALCULATOR</title>
+  <script>
+    function temperatureConverter() {
+      var fromScale = document.getElementById("temp").value;
+      var toScale = document.getElementById("temps").value;
+      var temperatureInput = parseFloat(document.getElementById("inputTemperature").value);
+      var result;
+
+      if (fromScale === "celsius" && toScale === "fahrenheit") {
+        result = (temperatureInput * 9/5) + 32;
+      } else if (fromScale === "fahrenheit" && toScale === "celsius") {
+        result = (temperatureInput - 32) / 1.8;
+      } else {
+        result = "Invalid conversion";
+      }
+
+      document.getElementById("outputTemperature").innerHTML = "Result: " + result.toFixed(2);
+
+    }
+  </script>
+</head>
+
+<body class="class1">
+  <div style="text-align:center">
+    <img src="image/logokptmbp.png" alt="My picture" width="250" height="100">
+  </div>
+  <p class="class2"> <a href="index.html" >HOME</a> | <a href="coversion.html">CORVERSION</a>| <a
+      href="calculatetemp.html">TEMPERATURE CONVERTER</a></P>
+  <hr>
+  <h1> -TEMPERATURE CALCULATE- </h1>
+  <pre>
+	 A <b><i>temperature converter</b></i> is a tool or device that allows users to easily convert temperatures from one scale to another. Common temperature scales include Celsius and 
+	 Fahrenheit. The converter takes an input temperature value in one scale and provides the equivalent value in the desired scale, simplifying the process of comparing or transitioning
+	 between different temperature measurements. This tool is helpful in various fields, such as cooking, science, and weather, where temperatures may be expressed in different units.
+  </pre>
+
+
+  <table class=center>
+      <tr>
+        <td>
+          <label for="temp">From:</label>
+          <select name="temp" id="temp">
+            <option value=""></option>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+          </select>
+        </td>
+        <td>
+          <label for="temps">To:</label>
+          <select name="temps" id="temps">
+            <option value=""></option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celsius</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label>Temperature:</label>
+          <input id="inputTemperature" type="number" placeholder="Enter temperature" oninput="temperatureConverter()" onchange="temperatureConverter()">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <p id="outputTemperature">Result: </p>
+        </td>
+      </tr>
+  </table>
+  
+  <pre> THANKS FOR YOUR TIME TO EXPLORE AND TRY MY CORVERSION CALCULATE <a href="feedbackcustomer.html"> (FEEDBACK) !!</a></pre>
+
+  
+ 
+
+  <p class="class3"><i> <sup>created by NADIA AMIRAH (BPN221210434) &copy; by NOV2023/2024 </sup> </i></p>
+
+</body>
+
+</html>
